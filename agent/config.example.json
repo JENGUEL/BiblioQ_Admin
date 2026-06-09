@@ -1,0 +1,6 @@
+{
+  "supabase_url": "https://YOUR_PROJECT.supabase.co",
+  "agent_api_key": "YOUR_AGENT_KEY",
+  "checkin_interval_sec": 300,
+  "edge_function": "agent_checkin"
+}

@@ -1,0 +1,45 @@
+// Supabase Edge Function: agent_crash_report
+
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+const AGENT_KEY = Deno.env.get("AGENT_API_KEY") ?? "";
+
+serve(async (req) => {
+  if (req.method === "OPTIONS") {
+    return new Response(null, {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "authorization, x-agent-key, content-type",
+      },
+    });
+  }
+
+  const agentKey = req.headers.get("x-agent-key") ?? "";
+  if (AGENT_KEY && agentKey !== AGENT_KEY) {
+    return new Response(JSON.stringify({ error: "unauthorized" }), { status: 401 });
+  }
+
+  try {
+    const body = await req.json();
+    const supabase = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
+    );
+
+    const { data, error } = await supabase.from("crash_reports").insert({
+      machine_id: body.machine_id,
+      app_version: body.app_version ?? "",
+      error_type: body.error_type ?? "Error",
+      stack_trace: body.stack_trace ?? "",
+      occurred_at: body.occurred_at ?? new Date().toISOString(),
+    }).select("id").single();
+    if (error) throw error;
+
+    return new Response(JSON.stringify({ ok: true, id: data.id }), {
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (e) {
+    return new Response(JSON.stringify({ error: String(e) }), { status: 500 });
+  }
+});
