@@ -1,0 +1,687 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "app.js",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_app",
+      "community": 0,
+      "norm_label": "app.js"
+    },
+    {
+      "label": "escapeHtml()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L142",
+      "_origin": "ast",
+      "id": "js_app_escapehtml",
+      "community": 3,
+      "norm_label": "escapehtml()"
+    },
+    {
+      "label": "initials()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "js_app_initials",
+      "community": 0,
+      "norm_label": "initials()"
+    },
+    {
+      "label": "stockBadge()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "js_app_stockbadge",
+      "community": 0,
+      "norm_label": "stockbadge()"
+    },
+    {
+      "label": "statusDot()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "js_app_statusdot",
+      "community": 0,
+      "norm_label": "statusdot()"
+    },
+    {
+      "label": "typewriter()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "js_app_typewriter",
+      "community": 0,
+      "norm_label": "typewriter()"
+    },
+    {
+      "label": "animateValue()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "js_app_animatevalue",
+      "community": 0,
+      "norm_label": "animatevalue()"
+    },
+    {
+      "label": "showFletToast()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "js_app_showflettoast",
+      "community": 0,
+      "norm_label": "showflettoast()"
+    },
+    {
+      "label": "showScanToast()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L196",
+      "_origin": "ast",
+      "id": "js_app_showscantoast",
+      "community": 3,
+      "norm_label": "showscantoast()"
+    },
+    {
+      "label": "header()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L230",
+      "_origin": "ast",
+      "id": "js_app_header",
+      "community": 3,
+      "norm_label": "header()"
+    },
+    {
+      "label": "footer()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "js_app_footer",
+      "community": 0,
+      "norm_label": "footer()"
+    },
+    {
+      "label": "steps()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L238",
+      "_origin": "ast",
+      "id": "js_app_steps",
+      "community": 0,
+      "norm_label": "steps()"
+    },
+    {
+      "label": "initDashboardDemo()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L434",
+      "_origin": "ast",
+      "id": "js_app_initdashboarddemo",
+      "community": 3,
+      "norm_label": "initdashboarddemo()"
+    },
+    {
+      "label": "initAttendanceDemo()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L457",
+      "_origin": "ast",
+      "id": "js_app_initattendancedemo",
+      "community": 3,
+      "norm_label": "initattendancedemo()"
+    },
+    {
+      "label": "initMembersDemo()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L526",
+      "_origin": "ast",
+      "id": "js_app_initmembersdemo",
+      "community": 0,
+      "norm_label": "initmembersdemo()"
+    },
+    {
+      "label": "initBooksDemo()",
+      "file_type": "code",
+      "source_file": "js/app.js",
+      "source_location": "L620",
+      "_origin": "ast",
+      "id": "js_app_initbooksdemo",
+      "community": 0,
+      "norm_label": "initbooksdemo()"
+    },
+    {
+      "label": "main.js",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "js_main",
+      "community": 1,
+      "norm_label": "main.js"
+    },
+    {
+      "label": "formatBytes()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "js_main_formatbytes",
+      "community": 1,
+      "norm_label": "formatbytes()"
+    },
+    {
+      "label": "applyVersion()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "js_main_applyversion",
+      "community": 1,
+      "norm_label": "applyversion()"
+    },
+    {
+      "label": "initMobileNav()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "js_main_initmobilenav",
+      "community": 1,
+      "norm_label": "initmobilenav()"
+    },
+    {
+      "label": "initStickyBar()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "js_main_initstickybar",
+      "community": 1,
+      "norm_label": "initstickybar()"
+    },
+    {
+      "label": "initModals()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "js_main_initmodals",
+      "community": 1,
+      "norm_label": "initmodals()"
+    },
+    {
+      "label": "initQrScanner()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "js_main_initqrscanner",
+      "community": 1,
+      "norm_label": "initqrscanner()"
+    },
+    {
+      "label": "initAiAssistant()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L217",
+      "_origin": "ast",
+      "id": "js_main_initaiassistant",
+      "community": 1,
+      "norm_label": "initaiassistant()"
+    },
+    {
+      "label": "initMockSidebarNav()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L291",
+      "_origin": "ast",
+      "id": "js_main_initmocksidebarnav",
+      "community": 1,
+      "norm_label": "initmocksidebarnav()"
+    },
+    {
+      "label": "showToast()",
+      "file_type": "code",
+      "source_file": "js/main.js",
+      "source_location": "L327",
+      "_origin": "ast",
+      "id": "js_main_showtoast",
+      "community": 1,
+      "norm_label": "showtoast()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 2,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "BiblioQ Marketing Website",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_biblioq_marketing_website",
+      "community": 2,
+      "norm_label": "biblioq marketing website"
+    },
+    {
+      "label": "Pages",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "readme_pages",
+      "community": 2,
+      "norm_label": "pages"
+    },
+    {
+      "label": "Local preview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "readme_local_preview",
+      "community": 2,
+      "norm_label": "local preview"
+    },
+    {
+      "label": "Deployment",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "readme_deployment",
+      "community": 2,
+      "norm_label": "deployment"
+    },
+    {
+      "label": "Download links",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "readme_download_links",
+      "community": 2,
+      "norm_label": "download links"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_animatevalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_escapehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L233",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_footer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_header",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L457",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_initattendancedemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L620",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_initbooksdemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L434",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_initdashboarddemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_initials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L526",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_initmembersdemo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_showflettoast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_showscantoast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_statusdot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_stockbadge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "js_app",
+      "target": "js_app_typewriter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "js_app_header",
+      "target": "js_app_escapehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L483",
+      "weight": 1.0,
+      "source": "js_app_initattendancedemo",
+      "target": "js_app_escapehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L436",
+      "weight": 1.0,
+      "source": "js_app_initdashboarddemo",
+      "target": "js_app_escapehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/app.js",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "js_app_showscantoast",
+      "target": "js_app_escapehtml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_applyversion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_formatbytes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initaiassistant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initmobilenav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L291",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initmocksidebarnav",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initmodals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initqrscanner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_initstickybar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L327",
+      "weight": 1.0,
+      "source": "js_main",
+      "target": "js_main_showtoast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "js_main_initmodals",
+      "target": "js_main_showtoast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "js/main.js",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "js_main_initmocksidebarnav",
+      "target": "js_main_showtoast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_biblioq_marketing_website",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "readme_biblioq_marketing_website",
+      "target": "readme_deployment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "readme_biblioq_marketing_website",
+      "target": "readme_download_links",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "readme_biblioq_marketing_website",
+      "target": "readme_local_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "readme_biblioq_marketing_website",
+      "target": "readme_pages",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "bbb6deb1957614c0cca0fa49b601b1bd68a69911"
+}

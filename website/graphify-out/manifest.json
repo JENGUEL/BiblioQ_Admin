@@ -1,0 +1,92 @@
+{
+  "js/app.js": {
+    "mtime": 1781201272.4447923,
+    "ast_hash": "d6e0141116340a4d8a6d0905215a5639",
+    "semantic_hash": ""
+  },
+  "js/main.js": {
+    "mtime": 1781195369.2083032,
+    "ast_hash": "48e135ad1d4d18eaa59a70c7d8fe707e",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1781193743.1355705,
+    "ast_hash": "4460746145d71b2737c91fd060b23720",
+    "semantic_hash": ""
+  },
+  "demo.html": {
+    "mtime": 1781201175.623796,
+    "ast_hash": "315db5e458a404ec2f577db96751b6ff",
+    "semantic_hash": ""
+  },
+  "faq.html": {
+    "mtime": 1781194630.9037514,
+    "ast_hash": "2006a5c0b049c8bfacdb62b3fab5f194",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1781200823.3563173,
+    "ast_hash": "e2b31d2eaa4198d90c53a6bf4ead2726",
+    "semantic_hash": ""
+  },
+  "legal/privacy.html": {
+    "mtime": 1781193738.2993932,
+    "ast_hash": "7b8c895f0b2a492375c28c71f9326a64",
+    "semantic_hash": ""
+  },
+  "legal/terms.html": {
+    "mtime": 1781193739.9827268,
+    "ast_hash": "69e46abe604c4f54c68d2f121d47a146",
+    "semantic_hash": ""
+  },
+  "assets/icons/LOGO_ORNGE.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "0c73a703ed4f0c4d960883459cdcf01d",
+    "semantic_hash": ""
+  },
+  "assets/icons/LOGO_WHITE.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "87a38bc8d71dad30ebed78c5851bd907",
+    "semantic_hash": ""
+  },
+  "assets/icons/book.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "53780ae9d277eb9dbbc82eea8b189fe7",
+    "semantic_hash": ""
+  },
+  "assets/icons/home.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "2c0d3f8bbecade691fdf6bcfc49af112",
+    "semantic_hash": ""
+  },
+  "assets/icons/log-out.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "3d039b4dca11425d0eeb7ed2299965ff",
+    "semantic_hash": ""
+  },
+  "assets/icons/message-circle.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "d6a4af21323baf075a5338bba1a040c7",
+    "semantic_hash": ""
+  },
+  "assets/icons/printer.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "8a14e3fb6046a7a9fd5abde112b4954b",
+    "semantic_hash": ""
+  },
+  "assets/icons/user-check.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "fa2f37b28c3b7609427a5317cf223b4e",
+    "semantic_hash": ""
+  },
+  "assets/icons/users.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "01efc90f9e750010963b987127a495ce",
+    "semantic_hash": ""
+  },
+  "assets/images/hero_desk.png": {
+    "mtime": 1749871732.0,
+    "ast_hash": "0c73a703ed4f0c4d960883459cdcf01d",
+    "semantic_hash": ""
+  }
+}

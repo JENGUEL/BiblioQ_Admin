@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How BiblioQ Works — Smart Library Workflows</title>
+  <meta name="description" content="See how BiblioQ handles QR attendance, member management, book lending, analytics, and AI — step by step.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icons/LOGO_ORNGE.png" type="image/png">
+</head>
+<body class="hiw-page">
+
+  <nav class="global-nav">
+    <div class="global-nav-content">
+      <a href="index.html" class="global-nav-brand">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 5c-1.11-.9-2.58-1.4-4-1.4-1.74 0-3.41.51-4.88 1.4L12 5.12 11.88 5c-1.47-.89-3.14-1.4-4.88-1.4-1.42 0-2.89.5-4 1.4-.54.36-.88.98-.88 1.66v11.75c0 .76.54 1.42 1.28 1.56l7.85 1.57c.42.08.85.08 1.27 0l7.85-1.57c.74-.14 1.28-.8 1.28-1.56V6.66c0-.68-.34-1.3-.88-1.66zM11 18.91l-7-1.4V6.5l7 1.4v11.01zm10-1.4l-7 1.4V7.9l7-1.4v11.01z"/>
+        </svg>
+        BiblioQ
+      </a>
+      <ul class="global-nav-links" id="globalNavLinks">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="demo.html">Live Demo</a></li>
+        <li><a href="index.html#licensing">Licensing</a></li>
+        <li><a href="mailto:albert.dinglasa50@gmail.com">Contact</a></li>
+      </ul>
+      <button class="global-nav-toggle" id="globalNavToggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </nav>
+
+  <nav class="sub-nav">
+    <div class="sub-nav-content">
+      <a href="index.html" class="sub-nav-brand">BiblioQ<span data-version>v3.0.3</span></a>
+      <div class="sub-nav-actions">
+        <ul class="sub-nav-links">
+          <li><a href="how-it-works.html">Workflows</a></li>
+          <li><a href="demo.html">Try Demo</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+        <a class="btn-primary" href="demo.html">Start free trial</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero -->
+  <header class="tile tile-light hiw-hero">
+    <div class="grid-container text-container hiw-reveal is-visible">
+      <p class="eyebrow">Workflow overview</p>
+      <h1 class="display-lg">How BiblioQ streamlines your library</h1>
+      <p class="lead">From scanning student IDs to generating reports — all in one seamless workflow.</p>
+      <div class="cta-group">
+        <a class="btn-primary" href="demo.html">Start free trial</a>
+        <a href="index.html#features" class="text-link">Explore features</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. QR Attendance -->
+  <section class="tile tile-parchment" id="hiw-attendance">
+    <div class="grid-container">
+      <div class="split-layout hiw-reveal" data-hiw-reveal>
+        <div class="split-text">
+          <p class="eyebrow">Workflow 1</p>
+          <h2 class="display-lg">QR Attendance</h2>
+          <ol class="hiw-steps-list">
+            <li>Librarian scans student QR code (printed on ID or card).</li>
+            <li>BiblioQ logs the visit with timestamp.</li>
+            <li>Dashboard updates "Today's Visitors" instantly.</li>
+          </ol>
+        </div>
+        <div class="split-visual">
+          <div class="hiw-diagram hiw-flow-qr" aria-hidden="true">
+            <div class="hiw-flow-node hiw-flow-node--qr">
+              <i class="fa-solid fa-qrcode"></i>
+              <span>QR Code</span>
+            </div>
+            <div class="hiw-flow-arrow"><span class="hiw-flow-dot"></span></div>
+            <div class="hiw-flow-node hiw-flow-node--scan">
+              <i class="fa-solid fa-barcode"></i>
+              <span class="hiw-beam"></span>
+              <span>Scanner</span>
+            </div>
+            <div class="hiw-flow-arrow"><span class="hiw-flow-dot"></span></div>
+            <div class="hiw-flow-node hiw-flow-node--db">
+              <i class="fa-solid fa-database"></i>
+              <span>Log visit</span>
+            </div>
+            <div class="hiw-flow-arrow"><span class="hiw-flow-dot"></span></div>
+            <div class="hiw-flow-node hiw-flow-node--chart">
+              <div class="hiw-mini-chart">
+                <div class="hiw-mini-chart__bar" style="--h:40%"></div>
+                <div class="hiw-mini-chart__bar" style="--h:65%"></div>
+                <div class="hiw-mini-chart__bar" style="--h:85%"></div>
+                <div class="hiw-mini-chart__bar hiw-mini-chart__bar--rise" style="--h:100%"></div>
+              </div>
+              <span>Dashboard</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Member Management -->
+  <section class="tile tile-light" id="hiw-members">
+    <div class="grid-container">
+      <div class="split-layout hiw-split--reverse hiw-reveal" data-hiw-reveal>
+        <div class="split-text">
+          <p class="eyebrow">Workflow 2</p>
+          <h2 class="display-lg">Member Management</h2>
+          <ol class="hiw-steps-list">
+            <li>Add student (name, grade, section). Auto-generate local ID.</li>
+            <li>Edit or archive members.</li>
+            <li>Search and filter by grade/section.</li>
+          </ol>
+        </div>
+        <div class="split-visual">
+          <div class="hiw-diagram hiw-mock-table" id="hiw-mock-table">
+            <div class="hiw-mock-table__toolbar">
+              <select class="hiw-mock-filter" id="hiw-mock-filter" aria-hidden="true">
+                <option>All Grades</option>
+                <option selected>Grade 10</option>
+              </select>
+              <span class="hiw-mock-filter-label">Grade 10</span>
+            </div>
+            <table>
+              <thead><tr><th>Name</th><th>Grade</th><th>Section</th><th></th></tr></thead>
+              <tbody id="hiw-mock-tbody">
+                <tr><td>Maria Santos</td><td>10</td><td>Integrity</td><td><i class="fa-regular fa-pen-to-square hiw-edit-icon"></i></td></tr>
+                <tr><td>Juan Dela Cruz</td><td>10</td><td>Integrity</td><td><i class="fa-regular fa-pen-to-square"></i></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Book Borrowing -->
+  <section class="tile tile-dark" id="hiw-borrowing">
+    <div class="grid-container">
+      <div class="split-layout hiw-reveal" data-hiw-reveal>
+        <div class="split-text">
+          <p class="eyebrow" style="color:var(--primary);">Workflow 3</p>
+          <h2 class="display-lg">Book Borrowing &amp; Returns</h2>
+          <ol class="hiw-steps-list hiw-steps-list--dark">
+            <li>Librarian selects student and book title.</li>
+            <li>System checks borrowing limit and overdue status.</li>
+            <li>Due date is set (e.g., +7 days).</li>
+            <li>On return, fine is calculated automatically.</li>
+          </ol>
+        </div>
+        <div class="split-visual">
+          <div class="hiw-diagram hiw-borrow-timeline" aria-hidden="true">
+            <div class="hiw-timeline-step">
+              <div class="hiw-timeline-icon"><i class="fa-regular fa-id-card"></i></div>
+              <span>Student</span>
+            </div>
+            <div class="hiw-timeline-connector"></div>
+            <div class="hiw-timeline-step">
+              <div class="hiw-timeline-icon"><i class="fa-solid fa-book"></i></div>
+              <span>Book</span>
+            </div>
+            <div class="hiw-timeline-connector"></div>
+            <div class="hiw-timeline-step">
+              <div class="hiw-timeline-icon"><i class="fa-regular fa-calendar"></i></div>
+              <span>+7 days</span>
+            </div>
+            <div class="hiw-timeline-connector hiw-timeline-connector--return"></div>
+            <div class="hiw-timeline-step">
+              <div class="hiw-timeline-icon"><i class="fa-solid fa-rotate-left"></i></div>
+              <span>Return</span>
+            </div>
+            <div class="hiw-timeline-connector"></div>
+            <div class="hiw-timeline-step hiw-timeline-step--fine">
+              <div class="hiw-timeline-icon"><i class="fa-solid fa-coins"></i></div>
+              <span>Fine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Analytics -->
+  <section class="tile tile-parchment" id="hiw-analytics">
+    <div class="grid-container">
+      <div class="split-layout hiw-split--reverse hiw-reveal" data-hiw-reveal>
+        <div class="split-text">
+          <p class="eyebrow">Workflow 4</p>
+          <h2 class="display-lg">Analytics &amp; Reports</h2>
+          <ul class="hiw-steps-list hiw-steps-list--plain">
+            <li>Real-time dashboard: today's visits, top sections, peak hours.</li>
+            <li>Generate PDF reports (attendance, overdue, grade-level breakdown).</li>
+          </ul>
+          <button type="button" class="btn-primary" id="hiw-download-report">Download Report</button>
+        </div>
+        <div class="split-visual">
+          <div class="hiw-diagram hiw-bar-chart" id="hiw-bar-chart" aria-hidden="true">
+            <div class="hiw-bar-chart__bars">
+              <div class="hiw-bar" data-h="45"><span>Mon</span></div>
+              <div class="hiw-bar" data-h="72"><span>Tue</span></div>
+              <div class="hiw-bar" data-h="88"><span>Wed</span></div>
+              <div class="hiw-bar" data-h="65"><span>Thu</span></div>
+              <div class="hiw-bar" data-h="95"><span>Fri</span></div>
+            </div>
+            <p class="hiw-bar-chart__label">Weekly library visits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. AI Assistant -->
+  <section class="tile tile-light" id="hiw-ai">
+    <div class="grid-container">
+      <div class="hiw-section-intro hiw-reveal" data-hiw-reveal>
+        <p class="eyebrow">Workflow 5</p>
+        <h2 class="display-lg">AI Assistant</h2>
+        <p class="lead" style="max-width:640px;margin:var(--spacing-sm) auto 0;">Ask questions, generate reports, and email them — all in natural language.</p>
+      </div>
+
+      <div class="hiw-ai-duo hiw-reveal" data-hiw-reveal>
+        <!-- Left: chat demo -->
+        <article class="hiw-ai-card">
+          <h3 class="hiw-ai-card__title">Ask AI questions</h3>
+          <p class="hiw-ai-card__sub">Natural language queries with instant answers from your library data.</p>
+          <div class="hiw-ai-widget">
+            <div class="hiw-ai-widget__header">
+              <img src="assets/icons/LOGO_ORNGE.png" alt="" width="20" height="20">
+              <span>BiblioQ AI</span>
+            </div>
+            <div class="ai-chat-history hiw-ai-chat" id="hiw-ai-chat"></div>
+          </div>
+        </article>
+
+        <!-- Right: generate & email -->
+        <article class="hiw-ai-card">
+          <h3 class="hiw-ai-card__title">Generate &amp; email reports</h3>
+          <ol class="hiw-steps-list hiw-steps-list--compact">
+            <li>Librarian asks: <em>"Send this month's attendance report to principal@school.edu"</em></li>
+            <li>AI confirms the request, generates a PDF report on the fly.</li>
+            <li>The report is automatically emailed to the specified address.</li>
+            <li>Librarian receives: <strong>"Report sent successfully."</strong></li>
+          </ol>
+          <div class="hiw-email-stage" id="hiw-email-anim" aria-hidden="true">
+            <div class="hiw-email-step hiw-email-step--source">
+              <div class="hiw-email-icon hiw-email-icon--brain"><i class="fa-solid fa-brain"></i></div>
+              <span>AI</span>
+            </div>
+            <div class="hiw-email-connector"></div>
+            <div class="hiw-email-step hiw-email-step--pdf">
+              <div class="hiw-email-icon hiw-email-icon--gear">
+                <i class="fa-solid fa-gears"></i>
+                <span class="hiw-email-paper"><i class="fa-regular fa-file-pdf"></i></span>
+              </div>
+              <span>PDF</span>
+            </div>
+            <div class="hiw-email-connector"></div>
+            <div class="hiw-email-step hiw-email-step--mail">
+              <div class="hiw-email-icon hiw-email-icon--envelope"><i class="fa-regular fa-envelope"></i></div>
+              <span>Email</span>
+            </div>
+            <div class="hiw-email-connector hiw-email-connector--fly"></div>
+            <div class="hiw-email-step hiw-email-step--done">
+              <div class="hiw-email-icon hiw-email-icon--check"><i class="fa-solid fa-circle-check"></i></div>
+              <span>Sent</span>
+            </div>
+          </div>
+          <p class="hiw-email-status" id="hiw-email-status" aria-live="polite"></p>
+          <button type="button" class="btn-primary hiw-email-demo-btn" id="hiw-email-demo-btn">Generate &amp; Email</button>
+          <p class="hiw-callout fine-print">AI can also schedule recurring reports (daily/weekly) and email them to multiple recipients.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. End-to-End Summary -->
+  <section class="tile tile-dark-2" id="hiw-summary">
+    <div class="grid-container text-container">
+      <div class="hiw-reveal" data-hiw-reveal style="text-align:center;margin-bottom:var(--spacing-xl);">
+        <p class="eyebrow" style="color:var(--primary);">Complete picture</p>
+        <h2 class="display-lg">One connected library workflow</h2>
+        <p class="lead-airy" style="color:var(--body-muted);max-width:640px;margin:var(--spacing-sm) auto 0;">Every step flows into the next — from the first scan to the final report.</p>
+      </div>
+      <div class="hiw-e2e-wrap hiw-reveal" data-hiw-reveal data-hiw-e2e>
+        <svg class="hiw-e2e-svg" viewBox="0 0 900 120" aria-hidden="true">
+          <path class="hiw-e2e-path" d="M 50 60 L 150 60 L 250 60 L 350 60 L 450 60 L 550 60 L 650 60 L 750 60 L 850 60" fill="none" stroke="#F7944D" stroke-width="2" stroke-dasharray="8 6"/>
+          <circle class="hiw-e2e-dot" r="6" fill="#F7944D" cx="50" cy="60"/>
+          <g class="hiw-e2e-node" transform="translate(50,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">ID</text></g>
+          <g class="hiw-e2e-node" transform="translate(150,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">QR</text></g>
+          <g class="hiw-e2e-node" transform="translate(250,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">Scan</text></g>
+          <g class="hiw-e2e-node" transform="translate(350,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">Borrow</text></g>
+          <g class="hiw-e2e-node" transform="translate(450,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">Return</text></g>
+          <g class="hiw-e2e-node" transform="translate(550,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">Report</text></g>
+          <g class="hiw-e2e-node" transform="translate(650,60)"><circle r="22" fill="#252540" stroke="#F7944D"/><text y="5" text-anchor="middle" fill="#fff" font-size="9">AI</text></g>
+        </svg>
+        <div class="hiw-e2e-labels">
+          <span>Student ID</span><span>QR scan</span><span>Attendance</span><span>Borrow</span><span>Return</span><span>Report</span><span>AI query</span>
+        </div>
+      </div>
+      <div class="hiw-summary-cta hiw-reveal" data-hiw-reveal>
+        <a class="btn-primary" href="demo.html">Try the full demo</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="landing-toast" id="hiwToast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">
+    <div class="grid-container">
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h4>Application</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="demo.html">Live Demo</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>IT &amp; Deployment</h4>
+          <ul>
+            <li><a href="index.html#it">Windows deployment</a></li>
+            <li><a href="index.html#licensing">License activation</a></li>
+            <li><a href="mailto:license@biblioq.com">Contact IT support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#licensing">School Site License</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="legal/privacy.html">Privacy Policy</a></li>
+            <li><a href="legal/terms.html">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal-row">
+        <p>Copyright © 2026 <strong>Miguel Mamerto O. Dinglasa</strong>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/how-it-works.js"></script>
+</body>
+</html>

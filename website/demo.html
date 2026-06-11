@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive BiblioQ demo — explore the dashboard and AI assistant without installing.">
+  <title>BiblioQ Demo — Interactive Dashboard Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/icons/LOGO_ORNGE.png" type="image/png">
+</head>
+<body class="demo-body flet-demo">
+  <div class="demo-web-bar">
+    <a href="index.html">&larr; Back to landing</a>
+    <a class="btn-primary demo-web-bar__dl" data-download-link href="#">Download BiblioQ</a>
+  </div>
+
+  <div class="flet-app">
+    <header class="flet-titlebar">
+      <div class="flet-titlebar__controls">
+        <button type="button" class="flet-traffic flet-traffic--close" aria-label="Close (demo)"></button>
+        <button type="button" class="flet-traffic flet-traffic--min" aria-label="Minimize (demo)"></button>
+      </div>
+      <span class="flet-titlebar__title">BiblioQ</span>
+      <button type="button" class="flet-mobile-toggle" id="flet-mobile-toggle" aria-label="Toggle sidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <hr class="flet-divider" />
+
+    <div class="flet-body">
+      <aside class="flet-sidebar" id="flet-sidebar">
+        <div class="flet-sidebar__inner">
+          <div class="flet-sidebar__indicator" id="flet-indicator"></div>
+          <button type="button" class="flet-sidebar__logo-btn" data-nav="0" aria-label="Dashboard">
+            <img src="assets/icons/LOGO_WHITE.png" alt="" width="35" height="35">
+          </button>
+          <nav class="flet-sidebar__nav" id="flet-nav">
+            <button type="button" class="flet-nav-btn is-active" data-nav="0" aria-label="Dashboard">
+              <img src="assets/icons/home.png" alt="" width="30" height="30">
+            </button>
+            <button type="button" class="flet-nav-btn" data-nav="1" aria-label="Attendance">
+              <img src="assets/icons/user-check.png" alt="" width="30" height="30">
+            </button>
+            <button type="button" class="flet-nav-btn" data-nav="2" aria-label="Members">
+              <img src="assets/icons/users.png" alt="" width="30" height="30">
+            </button>
+            <button type="button" class="flet-nav-btn" data-nav="3" aria-label="Books">
+              <img src="assets/icons/book.png" alt="" width="30" height="30">
+            </button>
+            <button type="button" class="flet-nav-btn" data-nav="4" aria-label="Print">
+              <img src="assets/icons/printer.png" alt="" width="30" height="30">
+            </button>
+            <button type="button" class="flet-nav-btn" data-nav="5" aria-label="AI Assistant">
+              <img src="assets/icons/message-circle.png" alt="" width="30" height="30">
+            </button>
+          </nav>
+          <button type="button" class="flet-sidebar__logout" id="flet-logout" aria-label="Logout">
+            <img src="assets/icons/log-out.png" alt="" width="24" height="24">
+          </button>
+        </div>
+      </aside>
+
+      <main class="flet-content" id="flet-content">
+        <!-- Dashboard -->
+        <section id="page-dashboard" class="flet-page is-active">
+          <div class="dash-scroll">
+            <div class="dash-header">
+              <div class="dash-header__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="26" height="26">
+                <span>BiblioQ</span>
+              </div>
+              <input type="search" class="dash-search" id="dash-search" placeholder="Search student name" aria-label="Search students">
+              <button type="button" class="dash-icon-btn" id="btn-settings" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+              <button type="button" class="dash-icon-btn" id="btn-notifications" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+              <button type="button" class="dash-icon-btn" id="btn-theme" aria-label="Toggle theme"><i class="fa-regular fa-sun"></i></button>
+              <button type="button" class="dash-account" id="btn-account">Librarian <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+
+            <div class="dash-welcome">
+              <span class="dash-welcome__dot"></span>
+              <span class="dash-welcome__status">System ready</span>
+              <span class="dash-welcome__date" id="dash-date"></span>
+            </div>
+
+            <div class="flet-stat-row">
+              <div class="flet-stat-card">
+                <i class="fa-regular fa-user flet-stat-card__icon" style="color:#F7944D"></i>
+                <div>
+                  <div class="flet-stat-card__value" data-stat-value="247">0</div>
+                  <div class="flet-stat-card__label">Students Today</div>
+                </div>
+              </div>
+              <div class="flet-stat-card">
+                <i class="fa-solid fa-layer-group flet-stat-card__icon" style="color:#4CAF50"></i>
+                <div>
+                  <div class="flet-stat-card__value" data-stat-value="12">0</div>
+                  <div class="flet-stat-card__label">Sections Today</div>
+                </div>
+              </div>
+              <div class="flet-stat-card">
+                <i class="fa-regular fa-calendar flet-stat-card__icon" style="color:#2196F3"></i>
+                <div>
+                  <div class="flet-stat-card__value" data-stat-value="" id="stat-date-val"></div>
+                  <div class="flet-stat-card__label" id="stat-date-label"></div>
+                </div>
+              </div>
+              <div class="flet-stat-card">
+                <i class="fa-solid fa-book flet-stat-card__icon" style="color:#EF5350"></i>
+                <div>
+                  <div class="flet-stat-card__value" data-stat-value="14">0</div>
+                  <div class="flet-stat-card__label">Overdue Books</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-columns">
+              <div class="dash-chart-panel">
+                <div class="dash-chart-toolbar">
+                  <span class="dash-chart-toolbar__title">Analytics Overview</span>
+                  <div class="dash-line-toggles" id="line-toggles">
+                    <button type="button" class="dash-line-toggle is-active" data-line="attendance"><span class="dash-line-toggle__bar" style="background:#F7944D"></span>Attendance</button>
+                    <button type="button" class="dash-line-toggle is-active" data-line="sections"><span class="dash-line-toggle__bar" style="background:#4CAF50"></span>Sections</button>
+                    <button type="button" class="dash-line-toggle" data-line="students"><span class="dash-line-toggle__bar" style="background:#2196F3"></span>Students</button>
+                  </div>
+                  <div class="dash-chart-modes" id="chart-modes">
+                    <button type="button" class="dash-chart-mode" data-mode="day">Day</button>
+                    <button type="button" class="dash-chart-mode is-active" data-mode="week">Week</button>
+                    <button type="button" class="dash-chart-mode" data-mode="month">Month</button>
+                  </div>
+                </div>
+                <div class="dash-chart-wrap">
+                  <svg id="line-chart" class="dash-line-chart" viewBox="0 0 620 250" preserveAspectRatio="none" aria-hidden="true"></svg>
+                </div>
+              </div>
+
+              <div class="dash-student-card" id="student-card">
+                <div class="dash-student-tabs" id="dash-student-tabs">
+                  <button type="button" class="dash-student-tab is-active" data-tab="recent" aria-label="Recent"><i class="fa-solid fa-user-plus"></i></button>
+                  <button type="button" class="dash-student-tab" data-tab="history" aria-label="History"><i class="fa-solid fa-clock-rotate-left"></i></button>
+                  <button type="button" class="dash-student-tab" data-tab="bookmarks" aria-label="Bookmarks"><i class="fa-regular fa-bookmark"></i></button>
+                  <button type="button" class="dash-student-tab" data-tab="stats" aria-label="Stats"><i class="fa-solid fa-chart-column"></i></button>
+                  <button type="button" class="dash-student-tab" data-tab="activity" aria-label="Activity"><i class="fa-regular fa-clock"></i></button>
+                </div>
+                <div class="dash-student-tab-panels" id="dash-student-panels">
+                  <div class="dash-student-panel is-active" data-panel="recent">
+                    <div class="dash-student-card__avatar">MS</div>
+                    <div class="dash-student-card__name">Maria Santos</div>
+                    <div class="dash-student-card__meta">Grade 10 - Integrity · ID: 2026-0348</div>
+                    <div class="dash-student-card__stats">
+                      <div><strong>18</strong><span>Visits this month</span></div>
+                      <div><strong>2</strong><span>Books borrowed</span></div>
+                    </div>
+                    <ul class="dash-student-list" id="student-list">
+                      <li data-name="Maria Santos">Maria Santos · Grade 10</li>
+                      <li data-name="Juan Dela Cruz">Juan Dela Cruz · Grade 10</li>
+                      <li data-name="Ana Reyes">Ana Reyes · Grade 9</li>
+                      <li data-name="Carlo Mendoza">Carlo Mendoza · Grade 11</li>
+                    </ul>
+                  </div>
+                  <div class="dash-student-panel" data-panel="history"></div>
+                  <div class="dash-student-panel" data-panel="bookmarks"></div>
+                  <div class="dash-student-panel" data-panel="stats"></div>
+                  <div class="dash-student-panel" data-panel="activity"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-rankings">
+              <div class="dash-rank-card">
+                <div class="dash-rank-card__badge"><i class="fa-solid fa-trophy"></i> Top Student</div>
+                <div class="dash-rank-card__name">Maria Santos</div>
+                <div class="dash-rank-card__meta">Grade 10 - Integrity · 18 visits</div>
+              </div>
+              <div class="dash-rank-card">
+                <div class="dash-rank-card__badge dash-rank-card__badge--section"><i class="fa-solid fa-users"></i> Top Section</div>
+                <div class="dash-rank-card__name">Grade 10 - Integrity</div>
+                <div class="dash-rank-card__meta">42 visits · 38 unique students</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI page -->
+        <section id="page-ai" class="flet-page">
+          <div class="ai-page">
+            <div class="ai-page__header">
+              <div class="ai-page__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="24" height="24">
+                <div>
+                  <strong>BiblioQ AI</strong>
+                  <span>Your library assistant</span>
+                </div>
+              </div>
+              <select class="ai-page__model" disabled aria-label="Model">
+                <option>Smart Queries (Offline)</option>
+              </select>
+              <span class="ai-page__status"><span class="ai-page__status-dot"></span>Smart</span>
+              <button type="button" class="ai-page__new" id="ai-new-chat" aria-label="New chat"><i class="fa-regular fa-comment"></i></button>
+            </div>
+            <div class="ai-page__messages" id="ai-page-messages" role="log" aria-live="polite"></div>
+            <div class="ai-page__chips" id="ai-page-chips"></div>
+            <div class="ai-page__quick" id="ai-page-quick"></div>
+            <div class="ai-page__input-row">
+              <input type="text" id="ai-page-input" placeholder="Message BiblioQ AI…" aria-label="Chat input">
+              <button type="button" id="ai-page-send" aria-label="Send"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Attendance -->
+        <section id="page-attendance" class="flet-page">
+          <div class="flet-page-scroll">
+            <div class="flet-page-header">
+              <div class="flet-page-header__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="26" height="26">
+                <div><span class="flet-page-header__title">BiblioQ</span><span class="flet-page-subtitle">Attendance Scanner</span></div>
+              </div>
+              <div class="flet-page-header__actions">
+                <button type="button" class="dash-icon-btn" data-demo-toast="Settings open in the full BiblioQ app."><i class="fa-solid fa-gear"></i></button>
+                <button type="button" class="dash-icon-btn" data-demo-toast="No new notifications in demo mode."><i class="fa-regular fa-bell"></i></button>
+                <button type="button" class="dash-account">Librarian <i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+            </div>
+            <div class="flet-two-col">
+              <div class="flet-main-col">
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Live Scanner</h3>
+                  <p class="flet-card__sub">Camera scans automatically. Feed appears in the PIP window (bottom-right in the full app).</p>
+                  <div class="att-scanner-placeholder"><i class="fa-solid fa-video"></i><span>Camera feed placeholder</span></div>
+                </div>
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Manual Entry</h3>
+                  <div class="att-manual-row">
+                    <div class="att-search-wrap">
+                      <input type="text" id="att-manual-input" placeholder="Enter Student ID or Name..." autocomplete="off">
+                      <ul class="att-suggestions" id="att-suggestions" hidden></ul>
+                    </div>
+                    <button type="button" class="btn-primary" id="att-submit">Submit</button>
+                  </div>
+                  <p class="att-result" id="att-result"></p>
+                </div>
+              </div>
+              <aside class="flet-side-panel">
+                <div class="flet-card">
+                  <h3 class="flet-card__title"><i class="fa-solid fa-users" style="color:#F7944D"></i> Today's Attendance</h3>
+                  <div class="att-today-count" id="att-today-count">247</div>
+                  <p class="att-today-date" id="att-today-date"></p>
+                  <div class="att-last-scan">
+                    <span class="att-last-scan__label">Last Scan</span>
+                    <strong id="att-last-name">Maria Santos</strong>
+                    <span id="att-last-time">10:42 AM</span>
+                  </div>
+                </div>
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Recent Scans</h3>
+                  <ul class="att-scan-list" id="att-scan-list"></ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Members -->
+        <section id="page-members" class="flet-page">
+          <div class="flet-page-scroll">
+            <div class="flet-page-header">
+              <div class="flet-page-header__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="26" height="26">
+                <span class="flet-page-header__title">BiblioQ</span>
+              </div>
+              <input type="search" class="dash-search flet-page-header__search" id="mem-search" placeholder="Search members...">
+              <div class="flet-page-header__actions">
+                <button type="button" class="dash-icon-btn" data-demo-toast="No new notifications in demo mode."><i class="fa-regular fa-bell"></i></button>
+                <button type="button" class="dash-account">Librarian <i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+            </div>
+            <div class="flet-two-col">
+              <div class="flet-main-col">
+                <div class="flet-stat-row flet-stat-row--3">
+                  <div class="flet-stat-card"><i class="fa-regular fa-user flet-stat-card__icon" style="color:#F7944D"></i><div><div class="flet-stat-card__value" id="mem-stat-total">0</div><div class="flet-stat-card__label">Total Members</div></div></div>
+                  <div class="flet-stat-card"><i class="fa-regular fa-circle-check flet-stat-card__icon" style="color:#4CAF50"></i><div><div class="flet-stat-card__value" id="mem-stat-active">0</div><div class="flet-stat-card__label">Active</div></div></div>
+                  <div class="flet-stat-card"><i class="fa-regular fa-circle-xmark flet-stat-card__icon" style="color:#888"></i><div><div class="flet-stat-card__value" id="mem-stat-inactive">0</div><div class="flet-stat-card__label">Inactive</div></div></div>
+                </div>
+                <div class="flet-filter-bar">
+                  <select id="mem-filter-grade"><option value="">All Grades</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select>
+                  <select id="mem-filter-section"><option value="">All Sections</option></select>
+                  <select id="mem-filter-status"><option value="">All Status</option><option value="active">Active</option><option value="inactive">Inactive</option><option value="graduated">Graduated</option></select>
+                  <button type="button" class="btn-primary" id="mem-add-btn">+ Add Member</button>
+                  <button type="button" class="btn-outline" id="mem-import-btn"><i class="fa-solid fa-download"></i> Import</button>
+                </div>
+                <div class="flet-table-wrap">
+                  <table class="flet-table" id="mem-table">
+                    <thead><tr><th>#</th><th>Name</th><th>Grade</th><th>Section</th><th>Status</th><th></th></tr></thead>
+                    <tbody id="mem-table-body"></tbody>
+                  </table>
+                </div>
+                <div class="flet-pagination" id="mem-pagination"></div>
+              </div>
+              <aside class="flet-side-panel">
+                <div class="flet-card" id="mem-overview">
+                  <h3 class="flet-card__title">Student Overview</h3>
+                  <div class="mem-overview__avatar" id="mem-overview-avatar">MS</div>
+                  <div class="mem-overview__name" id="mem-overview-name">Maria Santos</div>
+                  <div class="mem-overview__meta" id="mem-overview-meta">Grade 10 – Integrity</div>
+                  <div class="mem-overview__stats" id="mem-overview-stats"></div>
+                  <button type="button" class="btn-outline flet-full-btn" id="mem-history-btn">View History</button>
+                </div>
+                <div class="flet-card">
+                  <div class="flet-card__title-row">
+                    <h3 class="flet-card__title">Grade-Level Activity</h3>
+                    <button type="button" class="dash-icon-btn" id="mem-top-btn" title="Top Users"><i class="fa-solid fa-trophy"></i></button>
+                  </div>
+                  <div id="mem-grade-bars"></div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Books -->
+        <section id="page-books" class="flet-page">
+          <div class="flet-page-scroll">
+            <div class="flet-page-header">
+              <div class="flet-page-header__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="26" height="26">
+                <span class="flet-page-header__title">BiblioQ</span>
+              </div>
+              <input type="search" class="dash-search flet-page-header__search" id="book-search" placeholder="Search books or students...">
+              <div class="flet-page-header__actions">
+                <button type="button" class="dash-icon-btn" data-demo-toast="Settings open in the full BiblioQ app."><i class="fa-solid fa-gear"></i></button>
+                <button type="button" class="dash-icon-btn" data-demo-toast="No new notifications in demo mode."><i class="fa-regular fa-bell"></i></button>
+                <button type="button" class="dash-icon-btn" data-demo-toast="Theme toggle is available in the installed app."><i class="fa-regular fa-sun"></i></button>
+                <button type="button" class="dash-account">Librarian <i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+            </div>
+            <div class="flet-two-col">
+              <div class="flet-main-col">
+                <div class="flet-tabs" id="book-tabs">
+                  <button type="button" class="flet-tab is-active" data-tab="analytics">Analytics</button>
+                  <button type="button" class="flet-tab" data-tab="catalog">Catalog</button>
+                  <button type="button" class="flet-tab" data-tab="borrowed">Borrowed</button>
+                  <button type="button" class="flet-tab" data-tab="overdue">Overdue</button>
+                  <button type="button" class="flet-tab" data-tab="topbooks">Top Books</button>
+                </div>
+                <div class="flet-tab-panels" id="book-tab-panels"></div>
+                <div class="flet-card flet-card--records">
+                  <div class="flet-card__title-row">
+                    <h3 class="flet-card__title">Borrow Records</h3>
+                    <select id="book-record-filter"><option value="">All</option><option value="borrowed">Borrowed</option><option value="returned">Returned</option><option value="overdue">Overdue</option></select>
+                  </div>
+                  <div class="flet-table-wrap">
+                    <table class="flet-table"><thead><tr><th>Date</th><th>Student</th><th>Grade &amp; Section</th><th>Book</th><th>Status</th><th>Fine</th></tr></thead><tbody id="book-records-body"></tbody></table>
+                  </div>
+                </div>
+              </div>
+              <aside class="flet-side-panel">
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Quick Actions</h3>
+                  <button type="button" class="btn-primary flet-full-btn" id="book-borrow-btn">Borrow Book</button>
+                  <button type="button" class="btn-outline flet-full-btn" id="book-return-btn">Return Book</button>
+                  <button type="button" class="btn-outline flet-full-btn" id="book-add-btn">Add New Book</button>
+                </div>
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Today's Summary</h3>
+                  <div class="book-summary" id="book-summary"></div>
+                </div>
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Recent Activity <span class="flet-live-badge">Live</span></h3>
+                  <ul class="book-activity-list" id="book-activity-list"></ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Print -->
+        <section id="page-print" class="flet-page">
+          <div class="flet-page-scroll">
+            <div class="flet-page-header">
+              <div class="flet-page-header__brand">
+                <img src="assets/icons/LOGO_ORNGE.png" alt="" width="26" height="26">
+                <div><span class="flet-page-header__title">BiblioQ</span><span class="flet-page-subtitle">Reports &amp; Printing</span></div>
+              </div>
+              <div class="flet-page-header__actions">
+                <button type="button" class="dash-icon-btn" data-demo-toast="Settings open in the full BiblioQ app."><i class="fa-solid fa-gear"></i></button>
+                <button type="button" class="dash-icon-btn" data-demo-toast="No new notifications in demo mode."><i class="fa-regular fa-bell"></i></button>
+                <button type="button" class="dash-icon-btn" data-demo-toast="Theme toggle is available in the installed app."><i class="fa-regular fa-sun"></i></button>
+                <button type="button" class="dash-account">Librarian <i class="fa-solid fa-chevron-down"></i></button>
+              </div>
+            </div>
+            <div class="flet-two-col">
+              <div class="flet-main-col">
+                <div class="flet-report-grid" id="print-report-grid"></div>
+              </div>
+              <aside class="flet-side-panel">
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Quick Print</h3>
+                  <input type="search" class="flet-input" id="print-qr-search" placeholder="Search student for QR...">
+                  <button type="button" class="btn-primary flet-full-btn" id="print-qr-btn">Print QR</button>
+                  <button type="button" class="btn-outline flet-full-btn" id="print-today-btn">Print Today's Report</button>
+                </div>
+                <div class="flet-card">
+                  <h3 class="flet-card__title">Recent Prints</h3>
+                  <ul class="print-recent-list" id="print-recent-list"></ul>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <div class="scan-toast" id="scan-toast" role="status" aria-live="polite"></div>
+  <div class="flet-toast" id="flet-toast" role="status" aria-live="polite"></div>
+
+  <div class="demo-modal" id="demo-modal" hidden>
+    <div class="demo-modal__backdrop" id="demo-modal-backdrop"></div>
+    <div class="demo-modal__panel" id="demo-modal-panel" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      var VERSION_URL = "https://raw.githubusercontent.com/JENGUEL/-BiblioQ-Updates/main/version.json";
+      var FALLBACK = "https://github.com/JENGUEL/-BiblioQ-Updates/releases/download/v3.0.3/BiblioQ_Setup.exe";
+      fetch(VERSION_URL).then(function (r) { return r.json(); }).then(function (d) {
+        document.querySelectorAll("[data-download-link]").forEach(function (el) {
+          el.href = d.download_url || FALLBACK;
+        });
+      }).catch(function () {
+        document.querySelectorAll("[data-download-link]").forEach(function (el) {
+          el.href = FALLBACK;
+        });
+      });
+
+      BiblioQDemo.initFletShell();
+
+      if (window.location.hash === "#ai-chat") {
+        setTimeout(function () {
+          var btn = document.querySelector('.flet-nav-btn[data-nav="5"]');
+          if (btn) btn.click();
+        }, 800);
+      }
+    })();
+  </script>
+</body>
+</html>
